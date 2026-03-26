@@ -35,14 +35,22 @@ const Favorites = () => {
       fetchData();
     }
   }, []);
+
   return (
     <div className="mainFavorites">
       <Header />
       <h1>Mes recettes favorites</h1>
       <div className="meal-container">
-        {favData.map((meal) => (
-          <Card meal={meal} key={meal.idMeal} />
-        ))}
+        {favData.length !== 0 ? (
+          favData.map((meal) => <Card meal={meal} key={meal.idMeal} />)
+        ) : (
+          <div className="emptyBox">
+            <h2>
+              Aucune recette favorite trouvée. Veuillez ajouter une recette en
+              favori.
+            </h2>
+          </div>
+        )}
       </div>
       <Footer />
     </div>

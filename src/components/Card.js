@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Card = ({ meal }) => {
   //   const [liked, setLiked] = useState(false);
@@ -6,7 +6,7 @@ const Card = ({ meal }) => {
     let saved = localStorage.getItem(`like-${meal.idMeal}`);
     return saved === "true";
   });
-  console.log(liked);
+
   //   const [items, setItems] = useState([]);
 
   const toggleLike = () => {
@@ -21,9 +21,6 @@ const Card = ({ meal }) => {
     }
     // setLiked(!liked);
   };
-
-  console.log(localStorage);
-
   return (
     <div className="card">
       <div className="card-header">
