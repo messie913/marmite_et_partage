@@ -13,7 +13,7 @@ const Favorites = () => {
     const fetchData = async () => {
       try {
         // Prépare tous les appels API
-        const promises = keys.map((key) => {
+        const promises = keys.map((key, i) => {
           const id = key.replace("like-", ""); // On récupère juste l'ID
           return axios.get(
             `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`,
@@ -24,7 +24,7 @@ const Favorites = () => {
         const results = await Promise.all(promises);
 
         // On extrait les données des repas et on met à jour le state UNE SEULE FOIS
-        const meals = results.map((res) => res.data.meals[0]);
+        const meals = results.map((res, i) => res.data.meals[0]);
         setFavData(meals);
       } catch (error) {
         console.error("Erreur lors du chargement des favoris", error);

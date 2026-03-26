@@ -2,16 +2,14 @@
   flex: 0 23%;
   //   width: 23%;
   display: grid;
-  grid-template-rows: 1fr 350px 230px auto;
+  grid-template-rows: 1fr 350px auto auto;
   border: 2px solid $gray-Stonewall;
   border-radius: 10px;
   @media screen and (max-width: 1340px) {
     flex: 0 30%;
-    grid-template-rows: 1fr 350px 250px auto;
   }
   @media screen and (max-width: 850px) {
-    flex: 0 33%;
-    grid-template-rows: 1fr 350px 230px auto;
+    flex: 1 0 33%;
   }
   .likeBtn {
     color: rgb(245, 91, 91);
