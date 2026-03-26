@@ -1,0 +1,11 @@
+#mainFooter {
+  background-color: $green-Light;
+  min-height: 10vh;
+  color: white;
+  @include centerChild;
+  p {
+    font-family: $main-font;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
+}

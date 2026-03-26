@@ -1,0 +1,24 @@
+.banner-container {
+  background: url(./../../assets/img/mainBanner.png) center/cover;
+  min-height: 40vh;
+  @include centerChild;
+  .form-container {
+    width: 100%;
+    form {
+      @include centerChild;
+      input {
+        width: 50%;
+        opacity: 0.9;
+        height: 40px;
+        padding: 0 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid $green-Lemon;
+        @media screen and (max-width: 700px) {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

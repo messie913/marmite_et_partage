@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./../assets/fonts/Inter/static/Inter_18pt-Medium.ttf);
+}
+$main-font: "Inter", sans-serif;
+$white-Ecru: #f3f0e2;
+$marron-Copper: #b0863b;
+$gray-Stonewall: #928676;
+$green-Lemon: #949484;
+$green-Light: #4a5112;
+@mixin centerChild {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
+}
+body {
+  font-family: $main-font;
+  background-color: $white-Ecru;
+}
+li {
+  list-style-type: none;
+}

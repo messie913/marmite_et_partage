@@ -1,0 +1,40 @@
+.mainContent {
+  .result {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    margin: 20px 10px;
+    p {
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+    select {
+      width: 70px;
+      height: 30px;
+      padding: 0 10px;
+      font-family: $main-font;
+      font-size: 1rem;
+      background-color: transparent;
+      border: 1px solid $green-Lemon;
+      border-radius: 5px;
+      // appearance: base-select;
+      option {
+        background-color: transparent;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+.meal-container {
+  margin: 10px auto;
+  padding: 20px 5px;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
